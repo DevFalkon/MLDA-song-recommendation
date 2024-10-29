@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='recom.css') }}">
+    <title>Recommendations</title>
+</head>
+<body>
+    {% block content %}
+        <div class="container">
+            <h1>Recommendations based on "{{song_name}}" by {{artist_name}}</h1>
+            <div id="recom_list">
+                {% for name, artist, url in results %}
+                <a href="https://www.google.com/search?q={{name}}+{{artist[0]}}" target="_blank">
+                    <div class="recom">
+                        <img src="{{url}}" alt="{{name}} cover" class="cover-image">
+                        <div class="info">
+                            <p class="track-name">{{name}}</p>
+                            <p class="artist-name">by {{artist[0]}}</p>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    {% endblock %}
+</body>
+</html>
