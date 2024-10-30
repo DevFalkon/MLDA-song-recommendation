@@ -12,9 +12,9 @@
         <div id="user_input">
             <form method="post">
                 <h2>Enter Song Name</h2>
-                <input type="text" name="song_name" placeholder="Song Name" required>
+                <input type="text" name="song_name" placeholder="Song Name">
                 <h2>Enter Artist Name</h2>
-                <input type="text" name="artist_name" placeholder="Artist Name" required>
+                <input type="text" name="artist_name" placeholder="Artist Name">
                 <div id="diff_btn">
                     {% block content %}
                         {% with messages = get_flashed_messages() %}

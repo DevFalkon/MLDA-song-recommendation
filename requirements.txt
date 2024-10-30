@@ -1,6 +1,2 @@
 Flask
 pandas
-scikit-learn
-matplotlib
-seaborn
-langdetect
